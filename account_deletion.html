@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitud de Eliminación de Cuenta - Trocar</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/account-deletion.css">
+  <script defer src="js/logo.js"></script>
+  <script defer src="js/navbar.js"></script>
+  <script defer src="js/footer.js"></script>
+  <script defer src="js/account-deletion.js"></script>
+</head>
+
+<body>
+  <nav class="navbar" data-navbar></nav>
+
+  <main class="main-content">
+    <h1>Solicitud de Eliminación de Cuenta</h1>
+    <p>
+      Para solicitar la eliminación de tu cuenta, por favor proporciona tu número de teléfono.
+    </p>
+
+    <form id="delete-form" class="account-deletion-form">
+      <div class="form-group">
+        <label for="phone">Número de teléfono</label>
+        <input type="tel" id="phone" name="phone" placeholder="+54 9 11 1234 5678" required autocomplete="tel" />
+      </div>
+
+      <input type="text" name="company" style="display: none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+      <button type="submit" class="submit-button">Enviar Solicitud</button>
+    </form>
+
+    <p id="msg" class="form-message"></p>
+  </main>
+
+  <footer class="footer" data-footer></footer>
+</body>
+
+</html>

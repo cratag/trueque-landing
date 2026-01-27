@@ -1,0 +1,99 @@
+.main-content {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1 {
+  color: var(--color-primary-500);
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-neutral-700);
+  line-height: 1.6;
+}
+
+.account-deletion-form {
+  margin-top: 2rem;
+  max-width: 30rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  color: var(--color-neutral-700);
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  border: 0.0625rem solid var(--color-neutral-300);
+  border-radius: 0.25rem;
+  color: var(--color-neutral-black);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--color-primary-400);
+  outline: none;
+}
+
+.submit-button {
+  background-color: var(--color-primary-500);
+  border: none;
+  border-radius: 0.25rem;
+  color: var(--color-neutral-white);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: var(--color-primary-400);
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+.form-message {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.form-message.success {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-500);
+}
+
+.form-message.error {
+  background-color: var(--color-secondary-100);
+  color: var(--color-primary-500);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
