@@ -1,24 +1,118 @@
-.logo-container {
-  width: 12.5rem;
-  height: 12.5rem;
-}
-
-.logo-container svg {
-  width: 100%;
-  height: 100%;
-}
-
+/* Main content & hero card */
 .main-content {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding: 2rem 1rem;
+}
+
+.hero-card {
+  background: var(--color-surface);
+  backdrop-filter: blur(1rem);
+  border: 1px solid var(--color-surface-border);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-card);
+  max-width: 32rem;
+  width: 100%;
+  padding: 3rem 2rem;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  animation: slideUp 0.8s ease-out both;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--color-neutral-black);
+  text-align: center;
+  max-width: 22rem;
+}
+
+/* Logo */
+.logo-container {
+  width: 11rem;
+  height: 11rem;
+}
+
+.logo-container svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(var(--shadow-logo));
+}
+
+/* Store buttons */
+.store-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+}
+
+.store-buttons a {
+  display: block;
+  padding: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.store-buttons a:hover {
+  transform: translateY(-0.25rem);
+}
+
+.store-badge {
+  height: 3.25rem;
+  display: block;
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-card {
+    padding: 2.25rem 1.5rem;
+  }
+
   .logo-container {
-    width: 12.5rem;
-    height: 12.5rem;
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .store-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 12rem;
+    margin: 0 auto;
+  }
+
+  .store-buttons a {
+    text-align: center;
+  }
+
+  .store-badge {
+    height: 3rem;
+    margin: 0 auto;
   }
 }
