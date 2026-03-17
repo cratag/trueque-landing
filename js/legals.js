@@ -5,7 +5,7 @@ function loadLegal(endpoint) {
       let html = "";
 
       if (data.last_updated_at) {
-        html += `<p style="color: var(--color-primary-400);"><strong>Última actualización:</strong> ${new Date(data.last_updated_at).toLocaleDateString()}</p>`;
+        html += `<p style="color: var(--color-neutral-white);"><strong>Última actualización:</strong> ${new Date(data.last_updated_at).toLocaleDateString()}</p>`;
       }
 
       for (const title in data.content) {
