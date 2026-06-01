@@ -2,6 +2,7 @@ function createNavbar() {
   return `
     <a href="index.html" class="navbar-brand">
       <div class="navbar-logo" data-logo data-color="var(--color-neutral-white)"></div>
+      <span class="navbar-brand-text">trocar</span>
     </a>
     <div class="navbar-menu">
       <div class="dropdown">
