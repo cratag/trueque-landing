@@ -10,6 +10,10 @@
   padding: 2rem 1rem;
 }
 
+.main-content :is(h1, h2, p, span, strong) {
+  cursor: default;
+}
+
 .promo-banner {
   align-items: center;
   background-color: var(--color-primary-500);
