@@ -117,7 +117,12 @@ function introTimeline() {
       { y: 60, scale: 0.94, autoAlpha: 0, duration: 1, ease: "expo.out" },
       "-=0.4"
     )
-    .from(words, { yPercent: 110, rotate: 6, duration: 0.9, stagger: 0.06 }, "-=0.6")
+    // Pivot on the bottom-left corner so the rotation never lifts long words into view
+    .from(
+      words,
+      { yPercent: 130, rotate: 6, transformOrigin: "0% 100%", duration: 0.9, stagger: 0.06 },
+      "-=0.6"
+    )
     .from(".hero-subtitle", { y: 20, autoAlpha: 0, duration: 0.7 }, "-=0.5")
     .from(
       ".store-buttons a",
